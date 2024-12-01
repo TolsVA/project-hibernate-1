@@ -1,0 +1,25 @@
+<hibernate-configuration>
+    <session-factory>
+<!--        &lt;!&ndash; Указываем драйвер MySQL &ndash;&gt;-->
+<!--        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>-->
+
+<!--        &lt;!&ndash; URL подключения к базе данных &ndash;&gt;-->
+<!--        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/rpg</property>-->
+
+        <property name="hibernate.connection.driver_class">com.p6spy.engine.spy.P6SpyDriver</property>
+
+        <!-- URL подключения к базе данных -->
+        <property name="hibernate.connection.url">jdbc:p6spy:mysql://localhost:3306/rpg</property>
+
+        <!-- Указываем имя пользователя и пароль для базы данных -->
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">nsw25899</property>
+
+        <!-- Включаем диалект MySQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Дополнительные настройки Hibernate -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+<!--        <property name="hibernate.show_sql">true</property>-->
+    </session-factory>
+</hibernate-configuration>
