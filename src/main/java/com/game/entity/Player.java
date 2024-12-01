@@ -16,20 +16,14 @@ import lombok.NoArgsConstructor;
         @NamedQuery(
                 name = "Player_getAllCount",
                 query = "SELECT COUNT(p) FROM Player p"
-        ),
-//        @NamedQuery(
-//                name = "Admin",
-//                query = "from Employee e where e.smth = 'admin'"
-//        ),
-//        // Другие NamedQuery могут быть добавлены здесь
+        )
 })
 @NamedNativeQueries({
         @NamedNativeQuery(
                 name = "Player_getAll",
                 query = "SELECT * FROM rpg.player",
                 resultClass = Player.class
-        ),
-        // Другие NamedQuery могут быть добавлены здесь
+        )
 })
 @Table(name = "player", schema = "rpg")
 public class Player {
